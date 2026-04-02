@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SABER</title>
 
-    <style>
+ <style>
         /* ---------- BASE STYLING ---------- */
         body {
             font-family: Arial, sans-serif;
@@ -175,13 +175,14 @@
         }
 
         .top-right-image {
-            position: absolute;
-            top: 20px;
-            right: 0;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
+
+		display: block;
+		margin: 25px auto;
+		width: 200px;      /* You can adjust this */
+		max-width: 90%;
+		height: auto;
+		border-radius: 6px;
+
         }
 
         section { margin-top: 40px; }
@@ -248,7 +249,47 @@
 				grid-template-columns: repeat(2, 1fr);
 			}
 		}
-		``
+		
+		/* Custom grid: first row = 6 columns, second row = 3 columns */
+		.who-grid {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			gap: 15px;
+			margin-top: 20px;
+		}
+
+		/* Make h3 headings span the full row width */
+		.who-grid .row-heading {
+			grid-column: 1 / -1;
+			margin: 10px 0 5px;
+			font-size: 1.1rem;
+			font-weight: bold;
+		}
+
+		/* Image styling */
+		.who-grid a img {
+			width: 100%;
+			border-radius: 6px;
+			transition: transform 0.2s, opacity 0.2s;
+		}
+
+		.who-grid a img:hover {
+			transform: scale(1.05);
+			opacity: 0.85;
+		}
+
+		/* Responsive behaviour */
+		@media (max-width: 900px) {
+			.who-grid {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+
+		@media (max-width: 600px) {
+			.who-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
 		
     </style>
 </head>
@@ -293,45 +334,58 @@ window.onload = function() {
          alt="Project Logo"
          class="top-right-image">
 
-    <h1>SABER</h1>
+    <h1>SABER: Sustainable Alcohol By-Product Enhancement for Regenerative soils - A global approach to waste valorisation in agriculture</h1>
     <p>A short tagline or description of your initiative.</p>
 </header>
 
 <section id="who-are-we">
- 
     <h2>Who are we?</h2>
     <p>
         Write a brief introduction about your group, team, or organisation.
         Below are placeholder images representing members, partners, or roles.
     </p>
 
-    <div class="image-grid">
-        <a href="https://example.com/link1">
-            <img src="https://via.placeholder.com/150" alt="Placeholder 1">
+    <div class="who-grid">
+	
+	<h3 class="row-heading">Academic Team</h3>
+	
+	
+
+        <!-- Row 1 (6 images) -->
+		<a>
+        <img src="leeds.png">
         </a>
-        <a href="https://example.com/link2">
-            <img src="https://via.placeholder.com/150" alt="Placeholder 2">
+        <a>
+        <img src="rgu.png">
         </a>
-        <a href="https://example.com/link3">
-            <img src="https://via.placeholder.com/150" alt="Placeholder 3">
+		<a>
+        <img src="tec.png">
         </a>
-        <a href="https://example.com/link4">
-            <img src="https://via.placeholder.com/150" alt="Placeholder 4">
+		<a>
+        <img src="auckland.png">
         </a>
-        <a href="https://example.com/link5">
-            <img src="https://via.placeholder.com/150" alt="Placeholder 5">
+		<a>
+        <img src="oviedo.png">
         </a>
-        <a href="https://example.com/link6">
-            <img src="https://via.placeholder.com/150" alt="Placeholder 6">
+		<a>
+        <img src="udlap.png">
         </a>
-        <a href="https://example.com/link7">
-            <img src="https://via.placeholder.com/150" alt="Placeholder 7">
+
+        <!-- Row 2 (3 images) -->
+		
+	<h3 class="row-heading">Industry Partners</h3>
+		
+        <a>
+        <img src="cnit.png">
         </a>
-        <a href="https://example.com/link8">
-            <img src="https://via.placeholder.com/150" alt="Placeholder 8">
+		<a>
+        <img src="hawke.png">
         </a>
+		<a>
+        <img src="trabanco.png">
+        </a>
+
     </div>
-</section>
 </section>
 
 <section id="what-do-we-want">
