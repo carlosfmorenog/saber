@@ -302,15 +302,26 @@
 			}
 		}
 		
+	
+	.hamburgerbutton {
+	  border: 0;
+	  background: transparent;
+	  color: inherit;
+	  padding: 0;
+	}
+	``
+
     
 .funding-section { float: right; text-align: center; margin-left: 20px;}
-.funding-placeholder { width: 200px; height: auto; margin: 5px;}</style>
+.funding-placeholder { width: 200px; height: auto; margin: 5px;}
+</style>
+
 </head>
 <body>
 <!-- ---------- NAVIGATION + TOGGLES ---------- -->
 <nav class="classic-nav">
     <!-- Hamburger icon (mobile only) -->
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <button class="hamburgerbutton" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false" type="button">☰</button>
 
     <ul id="nav-menu">
         <li><a href="#who-are-we">Partners</a></li>
@@ -417,7 +428,7 @@ function toggleMenu() {
 </section>
 <section id="progress">
 <h2>What have we done so far?</h2>
-<p>We have successfully secured NERC (UK) and SECIHTI (Mexico) funding to establish a robust international consortium with research facilities in six universities across four countries, plus three industry partners. In November 2025, we conducted the <a href="https://agavesymposium.my.canva.site/agave-international-symposium" target="_blank">AGAVE Symposium</a>, an event that brought together students, academics and private sector stakeholders to solve environmental challenges in the state of Jalisco. Furthermore, we have validated our initial testing platforms, such as the soil microcosm framework, and secured formal commitments and "in-kind" resources from our founding industry partners. </p>
+<p>We have successfully secured <a href="https://www.ukri.org/opportunity/environmental-sciences-global-partnerships-seedcorn-fund-2025/" target="_blank">UKRI NERC<a/> (UK) and SECIHTI (Mexico) funding to establish our international consortium. In November 2025, we conducted the <a href="https://agavesymposium.my.canva.site/agave-international-symposium" target="_blank">AGAVE Symposium</a>, an event that brought together students, academics and private sector stakeholders to solve environmental challenges in the state of Jalisco. Furthermore, we have validated our initial testing platforms, such as the soil microcosm framework, and secured formal commitments and "in-kind" resources from our founding industry partners. </p>
 </section>
 <section id="more-info">
 <h2>Contact</h2>
