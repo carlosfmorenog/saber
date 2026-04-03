@@ -128,34 +128,45 @@
 			font-size: 24px;
 		}
 
-        /* ---------- HAMBURGER MENU ---------- */
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            font-size: 28px;
-            padding: 10px;
-            position: absolute;
-            left: 10px;
-            top: 5px;
-        }
+/* ---------- HAMBURGER MENU ---------- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    padding: 10px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
 
-        @media (max-width: 700px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                background: inherit;
-                padding: 15px 0;
-            }
+@media (max-width: 700px) {
+    .classic-nav ul {
+        display: none;
+        flex-direction: column;
+        background: inherit;
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #ddd;
+    }
 
-            nav ul.show {
-                display: flex;
-            }
+    body.dark-mode .classic-nav ul {
+        border-top: 1px solid #444;
+    }
 
-            .hamburger {
-                display: block;
-            }
-        }
+    .classic-nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .classic-nav {
+        justify-content: center;
+        padding-left: 50px; /* keeps dark-mode icon positioned correctly */
+    }
+}
 
         /* ---------- DARK MODE TOGGLE BUTTON ---------- */
         .dark-toggle {
@@ -298,16 +309,20 @@
 <body>
 <!-- ---------- NAVIGATION + TOGGLES ---------- -->
 <nav class="classic-nav">
-<ul>
-<li><a href="#who-are-we">Partners</a></li>
-<li><a href="#what-do-we-want">Goals</a></li>
-<li><a href="#what-we-need">Request</a></li>
-<li><a href="#benefits">Benefits</a></li>
-<li><a href="#progress">Achievements</a></li>
-<li><a href="#more-info">More info</a></li>
-</ul>
-<!-- Dark mode toggle stays here -->
-<div class="dark-toggle" onclick="toggleDarkMode()">🌙</div>
+    <!-- Hamburger icon (mobile only) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <ul id="nav-menu">
+        <li><a href="#who-are-we">Partners</a></li>
+        <li><a href="#what-do-we-want">Goals</a></li>
+        <li><a href="#what-we-need">Request</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#progress">Achievements</a></li>
+        <li><a href="#more-info">More info</a></li>
+    </ul>
+
+    <!-- Dark mode toggle stays -->
+    <div class="dark-toggle" onclick="toggleDarkMode()">🌙</div>
 </nav>
 <script>
 /* ---------- DARK MODE TOGGLE FUNCTION ---------- */
@@ -323,6 +338,12 @@ window.onload = function() {
     if (localStorage.getItem("darkMode") === "true") {
         document.body.classList.add("dark-mode");
     }
+}
+</script>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("nav-menu");
+    menu.classList.toggle("show");
 }
 </script>
 <header>
