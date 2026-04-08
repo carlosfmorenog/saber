@@ -6,127 +6,133 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SABER</title>
 <style>
-        /* ---------- BASE STYLING ---------- */
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-            line-height: 1.6;
-            background: #ffffff;
-            color: #000000;
-            transition: background 0.3s, color 0.3s;
-        }
 
-        /* ---------- DARK MODE VARIABLES ---------- */
-        body.dark-mode {
-            background: #1e1e1e;
-            color: #e6e6e6;
-        }
 
-        body.dark-mode nav {
-            background: #2a2a2a;
-            border-bottom: 1px solid #444;
-        }
+html {
+  scroll-behavior: smooth;
+}
 
-        body.dark-mode nav a {
-            color: #99cfff;
-        }
+/* ---------- BASE STYLING ---------- */
+body {
+	font-family: Arial, sans-serif;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 20px;
+	line-height: 1.6;
+	background: #ffffff;
+	color: #000000;
+	transition: background 0.3s, color 0.3s;
+}
 
-        body.dark-mode h2 {
-            border-bottom: 2px solid #444;
-        }
+/* ---------- DARK MODE VARIABLES ---------- */
+body.dark-mode {
+	background: #1e1e1e;
+	color: #e6e6e6;
+}
 
-        body.dark-mode footer {
-            border-top: 1px solid #444;
-        }
+body.dark-mode nav {
+	background: #2a2a2a;
+	border-bottom: 1px solid #444;
+}
 
-        body.dark-mode .social-icons a svg {
-            fill: #ccc;
-        }
+body.dark-mode nav a {
+	color: #99cfff;
+}
 
-        /* ---------- NAVIGATION BAR ---------- */
-        nav {
-            position: sticky;
-            top: 0;
-            background: #ffffff;
-            padding: 12px 0;
-            z-index: 1000;
-            border-bottom: 1px solid #ddd;
-        }
+body.dark-mode h2 {
+	border-bottom: 2px solid #444;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-        }
+body.dark-mode footer {
+	border-top: 1px solid #444;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #0066cc;
-            font-weight: bold;
-        }
+body.dark-mode .social-icons a svg {
+	fill: #ccc;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
-		
-		/* ---------- CLASSIC NAVIGATION BAR ---------- */
-		.classic-nav {
-			position: sticky;
-			top: 0;
-			z-index: 1000;
-			background: #ffffff;
-			border-bottom: 1px solid #ddd;
-			padding: 12px 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+/* ---------- NAVIGATION BAR ---------- */
+nav {
+	position: sticky;
+	top: 0;
+	background: #ffffff;
+	padding: 12px 0;
+	z-index: 1000;
+	border-bottom: 1px solid #ddd;
+}
 
-		.classic-nav ul {
-			list-style: none;
-			display: flex;
-			gap: 25px;
-			margin: 0;
-			padding: 0;
-		}
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
 
-		.classic-nav li {
-			display: inline-block;
-		}
+nav a {
+	text-decoration: none;
+	color: #0066cc;
+	font-weight: bold;
+}
 
-		.classic-nav a {
-			text-decoration: none;
-			font-weight: bold;
-			color: #0066cc;
-		}
+nav a:hover {
+	text-decoration: underline;
+}
 
-		.classic-nav a:hover {
-			text-decoration: underline;
-		}
+/* ---------- CLASSIC NAVIGATION BAR ---------- */
+.classic-nav {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background: #ffffff;
+	border-bottom: 1px solid #ddd;
+	padding: 12px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-		/* Dark mode support */
-		body.dark-mode .classic-nav {
-			background: #2a2a2a;
-			border-bottom: 1px solid #444;
-		}
+.classic-nav ul {
+	list-style: none;
+	display: flex;
+	gap: 25px;
+	margin: 0;
+	padding: 0;
+}
 
-		body.dark-mode .classic-nav a {
-			color: #add6ff;
-		}
+.classic-nav li {
+	display: inline-block;
+}
 
-		/* Dark Mode Toggle Button (unchanged) */
-		.dark-toggle {
-			position: absolute;
-			right: 15px;
-			top: 8px;
-			cursor: pointer;
-			font-size: 24px;
-		}
+.classic-nav a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #0066cc;
+}
+
+.classic-nav a:hover {
+	text-decoration: underline;
+}
+
+/* Dark mode support */
+body.dark-mode .classic-nav {
+	background: #2a2a2a;
+	border-bottom: 1px solid #444;
+}
+
+body.dark-mode .classic-nav a {
+	color: #add6ff;
+}
+
+/* Dark Mode Toggle Button (unchanged) */
+.dark-toggle {
+	position: absolute;
+	right: 15px;
+	top: 8px;
+	cursor: pointer;
+	font-size: 24px;
+}
 
 /* ---------- HAMBURGER MENU ---------- */
 .hamburger {
@@ -437,11 +443,20 @@ function toggleMenu() {
       <p>Be part of this initiative and work alongside academia and industry partners towards circular economy and sustainable business growth!</p>
     </div>
 
+<!--
     <button class="like-button" onclick="like()">
       ❤️ <span id="count">0</span>
     </button>
+-->
+		
+	<a href="#more-info" class="like-button">
+		<center> I'm interested</center>
+	</a>
+
+	
   </div>
 
+<!--
 <script>
     let likes = 0;
 
@@ -450,6 +465,7 @@ function toggleMenu() {
       document.getElementById("count").textContent = likes;
     }
   </script>
+-->
 
 </header>
 
@@ -529,6 +545,7 @@ function toggleMenu() {
 <section id="more-info">
 <h2>Contact</h2>
 <p><a href="mailto:c.moreno-garcia@rgu.ac.uk">c.moreno-garcia@rgu.ac.uk</a> | <a href="mailto:jna.brown@rgu.ac.uk">jna.brown@rgu.ac.uk</a></p>
+<iframe width="640px" height="480px" src="https://forms.cloud.microsoft/e/vvDPRW1XFS?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 </section>
 
 <footer>
